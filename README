@@ -1,0 +1,4 @@
+A simple C generic array that use of a big chunk of memory,
+for stored elements, that's it, all elements are one after the other in memory,
+so it makes use of CPU cache.
+Disadvantage of this implementation is that all elements must be of the same size.
