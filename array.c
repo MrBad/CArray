@@ -161,7 +161,7 @@ bool arrayTest()
     p = arr->data;
 
     assert(arr->length == 3);
-    assert(arr->capacity == 4);
+    assert(arr->capacity == ARRAY_INITIAL_CAPACITY);
     assert(strcmp(p[0].name, "Viorel Irimia") == 0);
     assert(p[0].age == 37);
     assert(strcmp(p[1].name, "John Doe") == 0);
@@ -173,7 +173,7 @@ bool arrayTest()
     arrayDeleteIndex(arr, 1);
 
     assert(arr->length == 2);
-    assert(arr->capacity == 4);
+    assert(arr->capacity == ARRAY_INITIAL_CAPACITY);
     assert(strcmp(p[0].name, "Viorel Irimia") == 0);
     assert(p[0].age == 37);
     assert(strcmp(p[1].name, "Evelyn Irimia") == 0);
@@ -181,7 +181,7 @@ bool arrayTest()
 
     arrayDeleteElement(arr, &p[0]);
     assert(arr->length == 1);
-    assert(arr->capacity == 4);
+    assert(arr->capacity == ARRAY_INITIAL_CAPACITY);
     assert(strcmp(p[0].name, "Evelyn Irimia") == 0);
     assert(p[0].age == 6);
 
